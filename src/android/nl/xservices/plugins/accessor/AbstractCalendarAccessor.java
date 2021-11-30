@@ -734,7 +734,7 @@ public abstract class AbstractCalendarAccessor {
             // also delete previously crashing calendars, see https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin/issues/241
             deleteCrashingCalendars(contentResolver);
         } catch (Throwable t) {
-            System.err.println(t.getMessage());
+            Log.e("Calendar",t.getMessage());
             t.printStackTrace();
         }
     }
