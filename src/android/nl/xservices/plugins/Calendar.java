@@ -228,7 +228,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -251,7 +251,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -273,10 +273,10 @@ public class Calendar extends CordovaPlugin {
           }
           callback.sendPluginResult(new PluginResult(PluginResult.Status.OK, activeCalendars));
         } catch (JSONException e) {
-          System.err.println("JSONException: " + e.getMessage());
+          Log.e("Calendar","JSONException: " + e.getMessage());
           callback.error(e.getMessage());
         } catch (Exception ex) {
-           System.err.println("Exception: " + ex.getMessage());
+           Log.e("Calendar","Exception: " + ex.getMessage());
            callback.error(ex.getMessage());
          }
       }
@@ -285,7 +285,7 @@ public class Calendar extends CordovaPlugin {
 
   private void createCalendar(JSONArray args) {
     if (args.length() == 0) {
-      System.err.println("Exception: No Arguments passed");
+      Log.e("Calendar","Exception: No Arguments passed");
       return;
     }
 
@@ -311,14 +311,14 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
 
   private void deleteCalendar(JSONArray args) {
     if (args.length() == 0) {
-      System.err.println("Exception: No Arguments passed");
+      Log.e("Calendar","Exception: No Arguments passed");
       return;
     }
 
@@ -342,13 +342,13 @@ public class Calendar extends CordovaPlugin {
             getCalendarAccessor().deleteCalendar(calendarName);
             callback.sendPluginResult(new PluginResult(PluginResult.Status.OK, "yes"));
           } catch (Exception e) {
-            System.err.println("Exception: " + e.getMessage());
+            Log.e("Calendar","Exception: " + e.getMessage());
             callback.error(e.getMessage());
           }
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -421,7 +421,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -444,7 +444,7 @@ public class Calendar extends CordovaPlugin {
 
   private void deleteEvent(JSONArray args) {
     if (args.length() == 0) {
-      System.err.println("Exception: No Arguments passed");
+      Log.e("Calendar","Exception: No Arguments passed");
       return;
     }
 
@@ -474,7 +474,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -498,7 +498,7 @@ public class Calendar extends CordovaPlugin {
 
         callback.sendPluginResult(new PluginResult(PluginResult.Status.OK, deleteResult));
       } catch (Exception e) {
-        System.err.println("Exception: " + e.getMessage());
+        Log.e("Calendar","Exception: " + e.getMessage());
         callback.error(e.getMessage());
       }
     }});
@@ -506,7 +506,7 @@ public class Calendar extends CordovaPlugin {
 
   private void findEvents(JSONArray args) {
     if (args.length() == 0) {
-      System.err.println("Exception: No Arguments passed");
+      Log.e("Calendar","Exception: No Arguments passed");
       return;
     }
 
@@ -538,7 +538,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
@@ -684,7 +684,7 @@ public class Calendar extends CordovaPlugin {
         }
       });
     } catch (JSONException e) {
-      System.err.println("Exception: " + e.getMessage());
+      Log.e("Calendar","Exception: " + e.getMessage());
       callback.error(e.getMessage());
     }
   }
